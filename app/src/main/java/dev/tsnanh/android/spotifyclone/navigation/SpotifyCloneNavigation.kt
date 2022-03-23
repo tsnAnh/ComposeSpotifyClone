@@ -14,16 +14,16 @@ fun SpotifyCloneNavigation(modifier: Modifier = Modifier) {
     val appState = LocalAppState.current
     NavHost(
         navController = appState.navController,
-        startDestination = SpotifyCloneDestination.Home.route,
+        startDestination = SpotifyCloneBottomNavigationDestinations.Home.route,
         modifier = modifier
     ) {
-        composable(SpotifyCloneDestination.Home.route) {
+        composable(SpotifyCloneBottomNavigationDestinations.Home.route) {
             Home()
         }
-        composable(SpotifyCloneDestination.Search.route) {
+        composable(SpotifyCloneBottomNavigationDestinations.Search.route) {
             Search()
         }
-        composable(SpotifyCloneDestination.Library.route) {
+        composable(SpotifyCloneBottomNavigationDestinations.Library.route) {
             Library()
         }
     }

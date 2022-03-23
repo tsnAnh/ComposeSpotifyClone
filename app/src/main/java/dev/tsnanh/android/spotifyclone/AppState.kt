@@ -5,12 +5,14 @@ import androidx.compose.material.ScaffoldState
 import androidx.compose.material.SnackbarDuration
 import androidx.compose.material.rememberScaffoldState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavHostController
+import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import dev.tsnanh.android.spotifyclone.navigation.SpotifyCloneDestination
+import dev.tsnanh.android.spotifyclone.navigation.SpotifyCloneBottomNavigationDestinations
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
@@ -20,10 +22,14 @@ class AppState(
     val coroutineScope: CoroutineScope,
     private val resources: Resources
 ) {
-    val bottomBarTabs = SpotifyCloneDestination.BottomNavigationDestinations
+    val bottomBarTabs = SpotifyCloneBottomNavigationDestinations.BottomNavigationDestinations
 
     val shouldShowBottomBar: Boolean
-        get() = navController.currentDestination?.route in SpotifyCloneDestination.BottomNavigationDestinations.map { it.route }
+        @Composable
+        get() {
+            val currentDestination by navController.currentBackStackEntryAsState()
+            return currentDestination?.destination?.route in SpotifyCloneBottomNavigationDestinations.BottomNavigationDestinations.map { it.route }
+        }
 
     fun navigateToBottomBarRoute(route: String) {
         navController.navigate(route = route) {
