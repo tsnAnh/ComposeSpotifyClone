@@ -64,4 +64,7 @@ dependencies {
     implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
     implementation("io.coil-kt:coil-compose:2.0.0-rc01")
     implementation("com.google.accompanist:accompanist-insets-ui:0.24.4-alpha")
+    implementation("androidx.core:core-splashscreen:1.0.0-beta01")
+    implementation("androidx.palette:palette-ktx:1.0.0")
+    implementation("com.google.android.material:material:1.5.0")
 }
