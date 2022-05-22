@@ -4,7 +4,6 @@
     <style name="Theme.SpotifyClone" parent="Theme.MaterialComponents.NoActionBar">
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
-        <item name="android:windowTranslucentNavigation">false</item>
         <item name="colorControlNormal">#ffffff</item>
     </style>
 

@@ -1,9 +1,12 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    kotlin("kapt")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
+    namespace = "dev.tsnanh.android.spotifyclone"
     compileSdk = 32
 
     defaultConfig {
@@ -47,6 +50,10 @@ android {
     }
 }
 
+kapt {
+    correctErrorTypes = true
+}
+
 dependencies {
     implementation("androidx.core:core-ktx:1.7.0")
     implementation("androidx.compose.ui:ui:1.1.1")
@@ -59,12 +66,14 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
     androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.1.1")
     debugImplementation("androidx.compose.ui:ui-tooling:1.1.1")
-    implementation("androidx.navigation:navigation-compose:2.4.1")
+    implementation("androidx.navigation:navigation-compose:2.4.2")
     implementation("androidx.compose.material:material-icons-extended:1.1.1")
     implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
     implementation("io.coil-kt:coil-compose:2.0.0-rc01")
     implementation("com.google.accompanist:accompanist-insets-ui:0.24.4-alpha")
-    implementation("androidx.core:core-splashscreen:1.0.0-beta01")
+    implementation("androidx.core:core-splashscreen:1.0.0-beta02")
     implementation("androidx.palette:palette-ktx:1.0.0")
-    implementation("com.google.android.material:material:1.5.0")
+    implementation("com.google.android.material:material:1.6.0")
+    implementation("com.google.dagger:hilt-android:2.38.1")
+    kapt("com.google.dagger:hilt-android-compiler:2.38.1")
 }

@@ -1,4 +1,4 @@
-package dev.tsnanh.android.spotifyclone
+package dev.tsnanh.android.spotifyclone.common
 
 import android.content.res.Resources
 import androidx.compose.material.ScaffoldState

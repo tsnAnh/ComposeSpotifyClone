@@ -8,7 +8,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.google.accompanist.insets.ui.Scaffold
-import dev.tsnanh.android.spotifyclone.LocalAppState
+import dev.tsnanh.android.spotifyclone.common.LocalAppState
 
 @Composable
 fun Library() {
