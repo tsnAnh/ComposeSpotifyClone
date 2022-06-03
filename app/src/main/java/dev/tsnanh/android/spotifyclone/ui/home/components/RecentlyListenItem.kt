@@ -4,17 +4,15 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import dev.tsnanh.android.spotifyclone.SpotifyData
 import dev.tsnanh.android.spotifyclone.theme.SpotifyCloneColors
@@ -27,6 +25,8 @@ fun RecentlyListenItem(
     onClick: (playlist: RecentlyListenPlaylistUiModel) -> Unit,
     modifier: Modifier = Modifier
 ) {
+    val scaleFactor = .985F
+    val alpha = .8F
     Row(
         verticalAlignment = Alignment.CenterVertically,
         modifier = modifier
@@ -34,10 +34,10 @@ fun RecentlyListenItem(
                 onClick = {
                     onClick(recentlyListenPlaylist)
                 },
-                pressedScale = .985F,
-                pressedAlpha = .8F
+                pressedScale = scaleFactor,
+                pressedAlpha = alpha,
             )
-            .clip(RoundedCornerShape(size = 4.dp))
+            .clip(MaterialTheme.shapes.medium)
             .background(SpotifyCloneColors.White.copy(alpha = .2F))
             .padding(end = 8.dp),
     ) {
@@ -49,11 +49,10 @@ fun RecentlyListenItem(
         )
         Text(
             text = recentlyListenPlaylist.title,
+            style = MaterialTheme.typography.h4,
             modifier = Modifier
                 .padding(horizontal = 8.dp)
                 .padding(bottom = 2.dp),
-            fontSize = 12.sp,
-            fontWeight = FontWeight.Bold,
         )
     }
 }

@@ -1,6 +1,7 @@
 package dev.tsnanh.android.spotifyclone.theme
 
 import androidx.compose.material.Typography
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
@@ -17,7 +18,33 @@ val Typography = Typography(
         fontWeight = FontWeight.Normal,
         fontSize = 16.sp,
     ),
-    defaultFontFamily = GothamFontFamily
+    defaultFontFamily = GothamFontFamily,
+    h1 = TextStyle(
+        fontSize = 38.sp,
+        fontWeight = FontWeight.Bold,
+    ),
+    h2 = TextStyle(
+        fontSize = 22.sp,
+        fontWeight = FontWeight.Bold,
+    ),
+    h3 = TextStyle(
+        fontSize = 13.sp,
+        fontWeight = FontWeight.Bold,
+    ),
+    h4 = TextStyle(
+        fontSize = 12.sp,
+        fontWeight = FontWeight.Bold,
+    ),
+    subtitle1 = TextStyle(
+        fontSize = 11.sp,
+        fontWeight = FontWeight.Normal,
+        color = Color.LightGray,
+    ),
+    overline = TextStyle(
+        fontWeight = FontWeight.Thin,
+        letterSpacing = 3.sp,
+        color = Color.LightGray,
+    )
     /* Other default text styles to override
     button = TextStyle(
         fontFamily = FontFamily.Default,

@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -13,12 +14,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
-import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import dev.tsnanh.android.spotifyclone.common.UiConstants
 import dev.tsnanh.android.spotifyclone.common.models.HomeListItemUiModel
@@ -31,7 +29,6 @@ fun <T : HomeListItemUiModel> SpotifyListItem(
     modifier: Modifier = Modifier,
     subtitle: (@Composable (item: T) -> Unit)? = null,
     imageSize: Dp = UiConstants.Artist.DefaultArtistImageSize.dp,
-    textSize: TextUnit = UiConstants.Artist.DefaultArtistNameTextSize.sp,
     horizontalAlignment: Alignment.Horizontal = Alignment.CenterHorizontally,
     imageShape: Shape = CircleShape,
 ) {
@@ -50,7 +47,7 @@ fun <T : HomeListItemUiModel> SpotifyListItem(
         )
         Spacer(modifier = Modifier.height(8.dp))
         item.title?.let {
-            Text(text = it, fontWeight = FontWeight.Bold, fontSize = textSize)
+            Text(text = it, style = MaterialTheme.typography.h3)
         }
         subtitle?.let {
             if (item.title != null) {

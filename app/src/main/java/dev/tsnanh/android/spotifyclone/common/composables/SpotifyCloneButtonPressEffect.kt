@@ -8,10 +8,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.remember
-import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.delay
 
-@OptIn(FlowPreview::class)
 @Composable
 fun SpotifyCloneButtonPressEffect(
     throttleFirstDuration: Long = 50L,
