@@ -1,4 +1,4 @@
-package dev.tsnanh.android.spotifyclone
+package dev.tsnanh.android.spotifyclone.common
 
 import androidx.compose.runtime.compositionLocalOf
 

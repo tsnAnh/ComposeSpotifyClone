@@ -1,4 +1,4 @@
-package dev.tsnanh.android.spotifyclone.composables
+package dev.tsnanh.android.spotifyclone.common.composables
 
 import androidx.compose.material.ripple.LocalRippleTheme
 import androidx.compose.runtime.Composable

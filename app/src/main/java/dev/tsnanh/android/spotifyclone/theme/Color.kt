@@ -8,4 +8,6 @@ object SpotifyCloneColors {
     val Purple700 = Color(0xFF000000)
     val Teal200 = Color(0xFFFFFFFF)
     val Surface = Color(0xFF191919)
+    val OnSurface = Color(0xFF121212)
+    val White = Color(0xFFFFFFFF)
 }
