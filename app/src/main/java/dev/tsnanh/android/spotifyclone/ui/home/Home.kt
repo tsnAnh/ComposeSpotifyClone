@@ -71,7 +71,6 @@ fun Home() {
     HomeContent(appState, homeViewState)
 }
 
-@OptIn(kotlinx.coroutines.FlowPreview::class)
 @Composable
 private fun HomeContent(appState: AppState, homeUiState: HomeUiState) {
     Scaffold(
