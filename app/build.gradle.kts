@@ -55,7 +55,7 @@ kapt {
 }
 
 dependencies {
-    implementation("androidx.core:core-ktx:1.7.0")
+    implementation(libs.androidx.core.ktx)
     implementation("androidx.compose.ui:ui:1.1.1")
     implementation("androidx.compose.material:material:1.1.1")
     implementation("androidx.compose.ui:ui-tooling-preview:1.1.1")

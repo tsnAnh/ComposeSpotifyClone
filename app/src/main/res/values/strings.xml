@@ -1,3 +1,9 @@
+<!--
+  ~ Created by tsnanh on 6/3/22, 11:29 PM
+  ~ Copyright (c) 2022 . All rights reserved.
+  ~ Last modified 6/3/22, 11:26 PM
+  -->
+
 <resources>
     <string name="app_name">Spotify Clone</string>
     <string name="text_home">Home</string>

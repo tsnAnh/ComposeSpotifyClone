@@ -1,4 +1,11 @@
+/*
+ * Created by tsnanh on 6/3/22, 11:29 PM
+ * Copyright (c) 2022 . All rights reserved.
+ * Last modified 6/3/22, 11:27 PM
+ */
+
 pluginManagement {
+    includeBuild("build-logic")
     repositories {
         gradlePluginPortal()
         google()
@@ -19,5 +26,6 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "Spotify Clone"
+rootProject.name = "spotify-clone"
 include(":app")
+include(":core-common")
