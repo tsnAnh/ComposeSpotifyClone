@@ -16,3 +16,4 @@
 local.properties
 /.idea/git_toolbox_prj.xml
 /.idea/
+/build-logic/convention/build/*
