@@ -8,7 +8,7 @@ plugins {
     `kotlin-dsl`
 }
 
-group = "dev.tsnanh.android.build.logic"
+group = "dev.tsnanh.android.buildlogic"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
@@ -24,39 +24,39 @@ dependencies {
 gradlePlugin {
     plugins {
         register("androidApplicationCompose") {
-            id = "nowinandroid.android.application.compose"
+            id = "dev.tsnanh.android.application.compose"
             implementationClass = "AndroidApplicationComposeConventionPlugin"
         }
         register("androidApplication") {
-            id = "nowinandroid.android.application"
+            id = "dev.tsnanh.android.application"
             implementationClass = "AndroidApplicationConventionPlugin"
         }
         register("androidApplicationJacoco") {
-            id = "nowinandroid.android.application.jacoco"
+            id = "dev.tsnanh.android.application.jacoco"
             implementationClass = "AndroidApplicationJacocoConventionPlugin"
         }
         register("androidLibraryCompose") {
-            id = "nowinandroid.android.library.compose"
+            id = "dev.tsnanh.android.library.compose"
             implementationClass = "AndroidLibraryComposeConventionPlugin"
         }
         register("androidLibrary") {
-            id = "nowinandroid.android.library"
+            id = "dev.tsnanh.android.library"
             implementationClass = "AndroidLibraryConventionPlugin"
         }
         register("androidFeature") {
-            id = "nowinandroid.android.feature"
+            id = "dev.tsnanh.android.feature"
             implementationClass = "AndroidFeatureConventionPlugin"
         }
         register("androidLibraryJacoco") {
-            id = "nowinandroid.android.library.jacoco"
+            id = "dev.tsnanh.android.library.jacoco"
             implementationClass = "AndroidLibraryJacocoConventionPlugin"
         }
         register("androidTest") {
-            id = "nowinandroid.android.test"
+            id = "dev.tsnanh.android.test"
             implementationClass = "AndroidTestConventionPlugin"
         }
         register("spotless") {
-            id = "nowinandroid.spotless"
+            id = "dev.tsnanh.spotless"
             implementationClass = "SpotlessConventionPlugin"
         }
     }

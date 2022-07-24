@@ -1,8 +1,39 @@
+@file:Suppress("UnstableApiUsage")
+
+include(":feature-library")
+
+
+include(":feature-search")
+
+
+include(":startup")
+
+
+include(":feature-home")
+
+
+include(":core-ui")
+
+
+include(":core-network")
+
+
+include(":core-datastore-test")
+
+
+include(":core-datastore")
+
+
+include(":core-navigation")
+
+
+include(":core-data-test")
+
 /*
- * Created by tsnanh on 6/3/22, 11:29 PM
- * Copyright (c) 2022 . All rights reserved.
- * Last modified 6/3/22, 11:27 PM
- */
+* Created by tsnanh on 6/3/22, 11:29 PM
+* Copyright (c) 2022 . All rights reserved.
+* Last modified 6/3/22, 11:27 PM
+*/
 
 pluginManagement {
     includeBuild("build-logic")
@@ -29,3 +60,7 @@ dependencyResolutionManagement {
 rootProject.name = "spotify-clone"
 include(":app")
 include(":core-common")
+include(":core-model")
+include(":core-testing")
+include(":core-data")
+include(":core-database")

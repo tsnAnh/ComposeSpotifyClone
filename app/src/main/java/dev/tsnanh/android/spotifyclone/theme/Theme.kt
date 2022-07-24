@@ -16,6 +16,6 @@ fun SpotifyCloneTheme(content: @Composable () -> Unit) {
         colors = DarkColorPalette,
         typography = Typography,
         shapes = Shapes,
-        content = content
+        content = content,
     )
 }

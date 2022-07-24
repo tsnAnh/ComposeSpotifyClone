@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by tsnanh on 6/5/22, 1:25 PM
+  ~ Copyright (c) 2022 . All rights reserved.
+  ~ Last modified 6/5/22, 1:25 PM
+  -->
+
+<resources>
+    <string name="text_yourFavoriteArtist">Nghệ sĩ yêu thích của bạn</string>
+    <string name="text_goodEvening">Chào buổi tối</string>
+</resources>

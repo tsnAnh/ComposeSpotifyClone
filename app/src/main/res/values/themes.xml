@@ -10,7 +10,6 @@
     <style name="Theme.SpotifyClone" parent="Theme.MaterialComponents.NoActionBar">
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
-        <item name="colorControlNormal">#ffffff</item>
     </style>
 
     <style name="Theme.App.SplashScreen" parent="Theme.SplashScreen">
